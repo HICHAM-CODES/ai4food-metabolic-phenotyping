@@ -76,21 +76,6 @@ DOI: 10.1093/database/baad049
 - Gut microbiome composition remained stable across the 30-day 
   intervention, consistent with short-term dietary study limitations
 
-## Repository Structure
-> Notebooks and source files are being uploaded progressively.
-├── notebooks/
-│   ├── 01_preprocessing.ipynb
-│   ├── 02_exploratory_analysis.ipynb
-│   ├── 03_clustering.ipynb
-│   ├── 04_ml_models.ipynb
-│   └── 05_shap_interpretability.ipynb
-├── src/
-│   ├── preprocessing.py
-│   └── features.py
-├── figures/
-├── requirements.txt
-└── README.md
-
 ## Tools and Technologies
 Python 3.11 | scikit-learn | TensorFlow/Keras | PyTorch | SHAP | 
 Pandas | NumPy | Matplotlib | Seaborn | JupyterLab

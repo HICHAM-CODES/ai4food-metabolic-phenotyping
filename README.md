@@ -1,4 +1,4 @@
-# AI4Food — Metabolic Phenotyping Using Multimodal Health Data
+# AI4Food (Metabolic Phenotyping Using Multimodal Health Data)
 
 ## Overview
 This repository contains the code and analysis pipeline developed during 
@@ -10,7 +10,7 @@ adults using machine learning and explainable AI approaches.
 ## Research Question
 Can we identify distinct metabolic profiles in individuals with obesity 
 by integrating wearable signals, continuous glucose monitoring, sleep 
-data, nutritional intake, and microbiome diversity — and can sleep-derived 
+data, nutritional intake, and microbiome diversity; And can sleep-derived 
 features predict metabolic outcomes such as glucose regulation and 
 thermoregulation?
 

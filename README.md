@@ -1,4 +1,4 @@
-# AI4Food (Metabolic Phenotyping Using Multimodal Health Data)
+# AI4Food — Metabolic Phenotyping Using Multimodal Health Data
 
 ## Overview
 This repository contains the code and analysis pipeline developed during 
@@ -9,10 +9,9 @@ adults using machine learning and explainable AI approaches.
 
 ## Research Question
 Can we identify distinct metabolic profiles in individuals with obesity 
-by integrating wearable signals, continuous glucose monitoring, sleep 
-data, nutritional intake, and microbiome diversity; And can sleep-derived 
-features predict metabolic outcomes such as glucose regulation and 
-thermoregulation?
+by integrating wearable signals, continuous glucose monitoring, sleep data, 
+nutritional intake, and microbiome diversity? And can sleep-derived features 
+predict metabolic outcomes such as glucose regulation and thermoregulation?
 
 ## Study Design
 - 93 participants with overweight or obesity (BMI 27–35 kg/m²)
@@ -43,42 +42,40 @@ The AI4FoodDB dataset is publicly available for research purposes:
 If you use this data, please cite the original publication:
 
 Romero-Tapiador S., et al. — *AI4FoodDB: A Database for Personalized 
-e-Health Nutrition and Lifestyle through Wearable Devices and 
-Artificial Intelligence* — Database: The Journal of Biological 
-Databases and Curation, 2023. 
-DOI: 10.1093/database/baad049
+e-Health Nutrition and Lifestyle through Wearable Devices and Artificial 
+Intelligence* — Database: The Journal of Biological Databases and Curation, 
+2023. DOI: 10.1093/database/baad049
 
 ## Methods
 - Multimodal data preprocessing and temporal alignment in Python
-- K-means clustering with elbow method for metabolic phenotyping
+- K-means clustering for metabolic phenotyping of glucose and 
+  temperature profiles
 - PCA for nutritional data dimensionality reduction
 - Supervised ML models: Random Forest and Neural Network (MLP)
+  with participant-level 5-fold cross-validation
 - Explainable AI (SHAP) for feature importance analysis
 - Statistical testing: t-tests, Wilcoxon, Chi-square, Spearman correlations
 
 ## Key Results
 - Digital monitoring produced significantly greater weight loss than 
-  manual phase (-1.55 kg vs -0.75 kg, p = 0.0004)
-- Three distinct weight-response clusters identified:
-  - Marked responders: -4.2 kg average
-  - Moderate responders: -1.8 kg average  
-  - Non-responders: +0.7 kg average (p < 0.0001)
+  traditional phase (-1.55 kg vs -0.75 kg, p = 0.0004)
+- Three distinct weight-response clusters identified with significantly 
+  different outcomes (p < 0.0001)
 - Nocturnal respiratory rate significantly associated with weight 
   variation (p = 0.0014)
 - Skin temperature clusters significantly associated with weight 
   variation (p = 0.0116)
-- Neural Network achieved 87% accuracy (AUC = 0.95) predicting 
-  glucose profiles from sleep variables
-- Random Forest achieved 84% accuracy (AUC = 0.93) predicting 
-  thermoregulation profiles
-- SHAP analysis identified restlessness, HRV (RMSSD), respiratory 
-  rate, and REM sleep duration as key predictors of metabolic outcomes
-- Gut microbiome composition remained stable across the 30-day 
-  intervention, consistent with short-term dietary study limitations
+- Random Forest showed above-chance predictive ability for both 
+  glucose profiles (AUC = 0.699) and thermoregulation profiles 
+  (AUC = 0.636) using participant-level cross-validation
+- SHAP analysis identified nocturnal respiratory rate, HRV (RMSSD), 
+  and restlessness as the most influential sleep-derived predictors
+- Gut microbiome composition remained stable across the intervention
 
 ## Tools and Technologies
-Python 3.11 | scikit-learn | TensorFlow/Keras | PyTorch | SHAP | 
-Pandas | NumPy | Matplotlib | Seaborn | JupyterLab
+Python 3.11 | scikit-learn | PyTorch | SHAP | Pandas | NumPy | 
+Matplotlib | Seaborn | JupyterLab
 
 ## License
 This project is licensed under the MIT License.
+
